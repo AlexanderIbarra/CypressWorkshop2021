@@ -1,4 +1,7 @@
 dist: trusty
+install:
+  - npm config set package-lock false
+  - npm install
 addons:
   chrome: stable
 language: node_js
