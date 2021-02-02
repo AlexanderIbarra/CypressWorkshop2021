@@ -2,6 +2,8 @@ dist: trusty
 install:
   - npm config set package-lock false
   - npm install
+  - npm install -g cypress-cli
+  - npm run build
 addons:
   chrome: stable
 language: node_js
