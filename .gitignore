@@ -158,4 +158,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Package-lock.json
+pacage-lock.json
+
 # End of https://www.toptal.com/developers/gitignore/api/vscode,windows,node,cypressio
