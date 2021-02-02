@@ -1,0 +1,34 @@
+{
+  "name": "cypressworkshop2021",
+  "version": "1.0.0",
+  "description": "\tThis is a Workshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderIbarra/CypressWorkshop2021.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Kevin Ibarra, Kevin.Ibarrao@perficient.com, AlexanderIbarra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexanderIbarra/CypressWorkshop2021/issues"
+  },
+  "homepage": "https://github.com/AlexanderIbarra/CypressWorkshop2021#readme",
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^5.5.0",
+    "cypress": "^6.4.0",
+    "ts-loader": "^8.0.14",
+    "webpack": "^5.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
