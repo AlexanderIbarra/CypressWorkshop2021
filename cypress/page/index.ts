@@ -1,0 +1,10 @@
+export { MenuContentPage } from './menu-content.page';
+export { ProductAddedModal } from './product-added-modal.page';
+export { ProductList } from './product-list.page';
+export { Summary } from './summary-step.page';
+export { SignIn } from './sign-in-step.page';
+export { Address } from './address-step.page';
+export { Shipping } from './shipping-step.page';
+export { BankPayment } from './bank-payment-step.page';
+export { Payment } from './payment-step.page';
+export { OrderSummary } from './order-summary-step.page';
