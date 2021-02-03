@@ -4,14 +4,14 @@ export class SignIn {
   private submitSelector: string;
 
   constructor () {
-      this.emailSelector = '#email';
-      this.passwordSelector = '#passwd';
-      this.submitSelector = '#SubmitLogin > span';
+    this.emailSelector = '#email';
+    this.passwordSelector = '#passwd';
+    this.submitSelector = '#SubmitLogin > span';
   }
 
   public logIn() {
-      cy.get(this.emailSelector).type('prueba@yopmail.com');
-      cy.get(this.passwordSelector).type('123456789');
-      cy.get(this.submitSelector).click();
+    cy.get(this.emailSelector).type('prueba@yopmail.com');
+    cy.get(this.passwordSelector).type('123456789');
+    cy.get(this.submitSelector).click();
   }
 }
