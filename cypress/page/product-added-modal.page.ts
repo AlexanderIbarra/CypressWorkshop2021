@@ -1,11 +1,11 @@
 export class ProductAddedModal {
-  private checkoutSelector: string;
+  private checkoutButtonSelector: string;
 
   constructor () {
-    this.checkoutSelector = '[style*="display: block;"] .button-container > a';
+    this.checkoutButtonSelector = '[style*="display: block;"] .button-container > a';
   }
 
   public checkout() {
-    cy.get(this.checkoutSelector).click();
+    cy.get(this.checkoutButtonSelector).click();
   }
 }

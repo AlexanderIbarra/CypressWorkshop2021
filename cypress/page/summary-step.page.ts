@@ -1,11 +1,11 @@
 export class Summary {
-  private checkoutSelector: string;
+  private checkoutButtonSelector: string;
 
   constructor () {
-    this.checkoutSelector = '.cart_navigation span';
+    this.checkoutButtonSelector = '.cart_navigation span';
   }
 
   public checkout() {
-    cy.get(this.checkoutSelector).click();
+    cy.get(this.checkoutButtonSelector).click();
   }
 }

@@ -9,36 +9,55 @@ import { MenuContentPage,
   Payment,
   OrderSummary } from '../page';
 
-describe('Open the Page', () => {
+describe('Given a user who wants to buy a T-shirt', () => {
   before(() => {
     cy.visit('http://automationpractice.com/');
   });
 
-  describe('Buying the T -shirt', () => {
-    describe('Select T-shirt and add to cart', () => {
+  describe('When the user does the process', () => {
+    before(() => {
       const menuContentPage =  new MenuContentPage();
       const productList = new ProductList();
       const productAddedModal = new ProductAddedModal();
       const summary = new Summary();
-      const signIn = new SignIn();
-      const address = new Address();
-      const shipping = new Shipping();
-      const bankPayment = new BankPayment();
-      const payment = new Payment();
-      const orderSummary = new OrderSummary();
 
-      it('The order is completed', () => {
-        menuContentPage.goToTShirtMenu();
-        productList.addCart();
-        productAddedModal.checkout();
-        summary.checkout();
+      menuContentPage.goToTShirtMenu();
+      productList.selectProduct('Faded Short Sleeve T-shirts');
+      productAddedModal.checkout();
+      summary.checkout();
+    });
+
+    describe('And Loging in the app', () => {
+      before(() => {
+        const signIn = new SignIn();
         signIn.logIn();
-        address.checkout();
-        shipping.acceptsTerms();
-        shipping.checkout();
-        bankPayment.selectBankPayment();
-        payment.confirmOrder();
-        orderSummary.getSummaryOrder().should('have.text', 'Your order on My Store is complete.');
+      });
+
+      describe('And Select the default address', () => {
+        before(() => {
+          const address = new Address();
+          address.checkout();
+        });
+
+        describe('And Pay with bank', () => {
+          const orderSummary = new OrderSummary();
+
+          before(() => {
+            const shipping = new Shipping();
+            const bankPayment = new BankPayment();
+            const payment = new Payment();
+
+            shipping.acceptsTerms();
+            shipping.checkout();
+            bankPayment.selectBankPayment();
+            payment.confirmOrder();
+          });
+
+          it('Then The order should be completed', () => {
+            orderSummary.getSummaryOrder()
+            .should('have.text', 'Your order on My Store is complete.');
+          });
+        });
       });
     });
   });

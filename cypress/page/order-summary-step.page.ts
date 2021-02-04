@@ -1,11 +1,11 @@
 export class OrderSummary {
-  private orderSelector: string;
+  private orderSummarySelector: string;
 
   constructor () {
-    this.orderSelector = '#center_column > div > p > strong';
+    this.orderSummarySelector = '#center_column > div > p > strong';
   }
 
   public getSummaryOrder() {
-    return cy.get(this.orderSelector).click();
+    return cy.get(this.orderSummarySelector).click();
   }
 }

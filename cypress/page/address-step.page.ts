@@ -1,11 +1,11 @@
 export class Address {
-  private checkoutSelector: string;
+  private checkoutButtonSelector: string;
 
   constructor () {
-    this.checkoutSelector = '#center_column > form > p > button > span';
+    this.checkoutButtonSelector = '#center_column > form > p > button > span';
   }
 
   public checkout() {
-    cy.get(this.checkoutSelector).click();
+    cy.get(this.checkoutButtonSelector).click();
   }
 }
