@@ -5,6 +5,9 @@ language: node_js
 cache:
   directories:
     - "node_modules"
+install:
+  - npm i
+  - cypress install
 jobs:
   inlcude:
     - stage: lint
