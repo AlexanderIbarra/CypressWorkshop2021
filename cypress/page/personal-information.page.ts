@@ -9,7 +9,7 @@ export class PersonalInformation {
     this.nameFieldSelector = 'input[name="firstname"]';
     this.lastnameFieldSelector = 'input[name="lastname"]';
     this.dateFieldSelector = ':nth-child(5) > [width="65%"] > input';
-    this.continentsFieldSelector ='select[name="continents"]';
+    this.continentsFieldSelector = 'select[name="continents"]';
     this.submitButtonSelector = 'button[name="submit"]';
   }
 
@@ -29,7 +29,7 @@ export class PersonalInformation {
     cy.get(`input[name="exp"][value="${experience}"]`).click();
   }
 
-  public fillDate(date: string){
+  public fillDate(date: string) {
     cy.get(this.dateFieldSelector).type(date);
   }
 
