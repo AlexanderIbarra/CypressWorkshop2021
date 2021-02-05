@@ -161,4 +161,7 @@ $RECYCLE.BIN/
 # Package-lock.json
 package-lock.json
 
+# dir mochawesome-report
+mochawesome-report/
+
 # End of https://www.toptal.com/developers/gitignore/api/vscode,windows,node,cypressio

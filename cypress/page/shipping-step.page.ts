@@ -1,17 +1,17 @@
 export class Shipping {
-  private termsSelector: string;
-  private checkoutSelector: string;
+  private termsCheckBoxSelector: string;
+  private checkoutButtonSelector: string;
 
   constructor () {
-    this.termsSelector = '#cgv';
-    this.checkoutSelector = '#form > p > button > span';
+    this.termsCheckBoxSelector = '#cgv';
+    this.checkoutButtonSelector = '#form > p > button > span';
   }
 
   public acceptsTerms() {
-    cy.get(this.termsSelector).click();
+    cy.get(this.termsCheckBoxSelector).click();
   }
 
   public checkout() {
-    cy.get(this.checkoutSelector).click();
+    cy.get(this.checkoutButtonSelector).click();
   }
 }

@@ -1,11 +1,11 @@
 export class BankPayment {
-  private payBankSelector: string;
+  private payBankButtonSelector: string;
 
   constructor () {
-    this.payBankSelector = '#HOOK_PAYMENT > div:nth-child(1) > div > p > a';
+    this.payBankButtonSelector = '.bankwire';
   }
 
   public selectBankPayment() {
-    cy.get(this.payBankSelector).click();
+    cy.get(this.payBankButtonSelector).click();
   }
 }

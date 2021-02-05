@@ -1,0 +1,10 @@
+{
+  "firstname" : "Kevin",
+  "lastname" : "Ibarra",
+  "sex" : "Male",
+  "experience" : 1,
+  "date" : "2/4/2021",
+  "profession" : "Automation Tester",
+  "tool" : ["Selenium Webdriver"],
+  "continent" : "South America"
+}
